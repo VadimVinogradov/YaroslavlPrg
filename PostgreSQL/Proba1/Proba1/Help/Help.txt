@@ -1,0 +1,55 @@
+﻿Nuget
+Npgsql.EntityFrameworkCore.PostgreSQL
+Для миграций
+Microsoft.EntityFrameworkCore.Tools
+
+SEQUENCE
+автоинкремент
+CREATE SEQUENCE public.autoid;
+
+-------------------------------------------
+++ NpgsqlException
+replace
+lc_messages = 'Russian_Russia.1251'
+to
+lc_messages = 'en_EN.UTF-8'
+-------------------------------------------
+
+-------------------------------------------
+Подключение pgAdmin к удаленному серверу PostgreSQL
+При подключении к удаленному серверу получаем ряд ошибок.
+Сначала рабочее место жалуется, что сервер его не слушает,
+потом, что у админа нет прав на подключение:
+- "Server doesn’t listen"
+- "Grant users remote access"
+
+1. Заходим в настройки сервера 
+2. Редактируем файл postgresql.conf
+Вместо: 
+listen_addresses = 'localhost'   
+Вписываем: 
+listen_addresses = '*'   
+
+3. Редактируем файл pg_hba.conf
+Вместо: 
+# IPv4 local connections:
+host    all         all         127.0.0.1         md5
+Вписываем: 
+# IPv4 local connections:
+host    all         all         0.0.0.0/0         md5
+
+4. Не забываем перезагрузить.
+ sudo service postgresql restart
+
+Все. С этого момента можно все и отовсюду.
+-------------------------------------------
+Для работы в логальной сети
+host    all         all         192.168.0.0/24    trust
+-------------------------------------------
+
+
+Сброс пароля в PostgreSQL 
+http://soft-setup.ru/administrirovanie/sbros-parolya-v-postgresql
+
+
+

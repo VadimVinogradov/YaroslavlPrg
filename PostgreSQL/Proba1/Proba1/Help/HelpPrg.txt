@@ -1,0 +1,27 @@
+﻿/*//==
+                string unicodeString = mesError;
+
+                // Create two different encodings.
+                Encoding ascii = Encoding.ASCII;
+                Encoding unicode = Encoding.Unicode;
+                //Encoding unicode = Encoding.UTF8;
+
+                // Convert the string into a byte array.
+                byte[] unicodeBytes = unicode.GetBytes(unicodeString);
+
+                // Perform the conversion from one encoding to the other.
+                byte[] asciiBytes = Encoding.Convert(unicode, ascii, unicodeBytes);
+
+                // Convert the new byte[] into a char[] and then into a string.
+                char[] asciiChars = new char[ascii.GetCharCount(asciiBytes, 0, asciiBytes.Length)];
+                ascii.GetChars(asciiBytes, 0, asciiBytes.Length, asciiChars, 0);
+                string asciiString = new string(asciiChars);
+
+                // Display the strings created before and after the conversion.
+                string s1= unicodeString;
+                string s2 = asciiString;
+
+
+                MessageBox.Show(s1);
+                MessageBox.Show(s2);
+                //==*/

@@ -1,0 +1,5 @@
+﻿1 Enable-Migrations
+2 Add-Migration Initial
+3 //Initial : Migration Upp <- add return;
+4 Update-Database
+5 //Initial : Migration Upp <- remove return;

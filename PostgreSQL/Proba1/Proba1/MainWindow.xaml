@@ -1,0 +1,58 @@
+﻿<Window x:Class="Proba1.MainWindow"
+        Name="WMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proba1"
+        mc:Ignorable="d"
+        Title="POSTGRESQL" Height="500" Width="400"
+        WindowStyle="ToolWindow"
+        FontSize="22"
+        WindowStartupLocation="CenterScreen"
+        Loaded="WLoaded"
+        Closing="WClosing"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="bExit"
+                Grid.Row="0"
+                Grid.Column="2"
+                Grid.ColumnSpan="3"
+                Content="Выйти" 
+                Margin="2"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Width="100"
+                Click="bExit_Click"
+                />
+
+        <Button x:Name="bCheckConnect"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Content="Проверка соединения" 
+                Margin="2"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="Auto"
+                Click="bCheckConnect_Click"
+                />
+
+    </Grid>
+</Window>
